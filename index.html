@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -94,34 +94,42 @@
       <ul class="figs">
         <li class="fig">
           <a href="political-thought-guide.html#thinker-aristotle">
-            <figure class="portrait portrait--wide" data-wiki="Aristotle"><span class="portrait__fallback">A</span></figure>
-            <h3 class="fig__name">Aristotle</h3>
-            <p class="fig__dates">384–322 BCE</p>
-            <p class="fig__line">Founded the comparative study of constitutions, and held that the city exists for the good life rather than for life alone.</p>
+            <figure class="portrait portrait--fig" data-wiki="Aristotle"><span class="portrait__fallback">A</span></figure>
+            <div class="fig__text">
+              <h3 class="fig__name">Aristotle</h3>
+              <p class="fig__dates">384–322 BCE</p>
+              <p class="fig__line">Founded the comparative study of constitutions, and held that the city exists for the good life rather than for life alone.</p>
+            </div>
           </a>
         </li>
         <li class="fig">
           <a href="political-thought-guide.html#thinker-john-stuart-mill">
-            <figure class="portrait portrait--wide" data-wiki="John Stuart Mill"><span class="portrait__fallback">JS</span></figure>
-            <h3 class="fig__name">John Stuart Mill</h3>
-            <p class="fig__dates">1806–1873</p>
-            <p class="fig__line">Set the harm principle against coercion by the state and against the despotism of custom alike.</p>
+            <figure class="portrait portrait--fig" data-wiki="John Stuart Mill"><span class="portrait__fallback">JS</span></figure>
+            <div class="fig__text">
+              <h3 class="fig__name">John Stuart Mill</h3>
+              <p class="fig__dates">1806–1873</p>
+              <p class="fig__line">Set the harm principle against coercion by the state and against the despotism of custom alike.</p>
+            </div>
           </a>
         </li>
         <li class="fig">
           <a href="political-thought-guide.html#thinker-hannah-arendt">
-            <figure class="portrait portrait--wide" data-wiki="Hannah Arendt"><span class="portrait__fallback">HA</span></figure>
-            <h3 class="fig__name">Hannah Arendt</h3>
-            <p class="fig__dates">1906–1975</p>
-            <p class="fig__line">Recovered politics as action among plural equals, and traced totalitarianism to loneliness and superfluousness.</p>
+            <figure class="portrait portrait--fig" data-wiki="Hannah Arendt"><span class="portrait__fallback">HA</span></figure>
+            <div class="fig__text">
+              <h3 class="fig__name">Hannah Arendt</h3>
+              <p class="fig__dates">1906–1975</p>
+              <p class="fig__line">Recovered politics as action among plural equals, and traced totalitarianism to loneliness and superfluousness.</p>
+            </div>
           </a>
         </li>
         <li class="fig">
           <a href="political-thought-guide.html#thinker-b-r-ambedkar">
-            <figure class="portrait portrait--wide" data-wiki="B. R. Ambedkar"><span class="portrait__fallback">BR</span></figure>
-            <h3 class="fig__name">B. R. Ambedkar</h3>
-            <p class="fig__dates">1891–1956</p>
-            <p class="fig__line">Held that caste is graded inequality beyond the reach of reform, and that democracy must deliver one person, one value in society as well as in law.</p>
+            <figure class="portrait portrait--fig" data-wiki="B. R. Ambedkar"><span class="portrait__fallback">BR</span></figure>
+            <div class="fig__text">
+              <h3 class="fig__name">B. R. Ambedkar</h3>
+              <p class="fig__dates">1891–1956</p>
+              <p class="fig__line">Held that caste is graded inequality beyond the reach of reform, and that democracy must deliver one person, one value in society as well as in law.</p>
+            </div>
           </a>
         </li>
       </ul>
@@ -131,7 +139,8 @@
       <p class="lede">The guide holds 123 entries, and a reader who begins at the beginning rarely reaches the end. Turn a card instead, and read whoever it gives you.</p>
       <div class="draw" id="drawCard" data-state="idle">
         <div class="draw__face">
-          <p class="draw__prompt">The deck is shuffled.</p>
+          <div class="deck" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p class="draw__prompt">The deck is cut and shuffled.</p>
           <button class="draw__button" id="drawButton" type="button">Turn a card</button>
         </div>
       </div>
@@ -154,9 +163,9 @@
     <p class="site-footer__legal">&copy; MMXXVI Thinkers Foundation. Portraits are reproduced from Wikimedia Commons under their respective licences.</p>
   </div>
 </footer>
-<script src="assets/js/site.js"></script>
-<script src="assets/js/portraits.js"></script>
-<script src="assets/js/thinkers.js"></script>
-<script src="assets/js/draw.js"></script>
+<script src="assets/js/site.js?v=5"></script>
+<script src="assets/js/portraits.js?v=5"></script>
+<script src="assets/js/thinkers.js?v=5"></script>
+<script src="assets/js/draw.js?v=5"></script>
 </body>
 </html>
