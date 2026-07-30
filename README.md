@@ -1,26 +1,34 @@
 # Thinkers Foundation
 
-Essays and research in political economy, philosophy, and history.
+An independent review of economics, moral politics, and philosophy.
 
-A static site. No build step, no dependencies, no framework. Open the HTML files in a browser and they work.
+A static site. No build step, no dependencies, no framework.
 
-## Files
+## Pages
 
-```
-index.html          Homepage: masthead, featured essay, latest publications, fields of study
-guide.html          Political Philosophy: A Guide by Era and School (7 eras, 51 schools, 132 thinkers)
-about.html          About page (placeholder text, replace it)
-logo_thf.png        Masthead logo (keep this filename)
-.nojekyll           Tells GitHub Pages to serve the files as they are
-assets/css/style.css
-assets/js/site.js   Drawer index: open, close, expand eras
-```
+| File | Purpose |
+| --- | --- |
+| `index.html` | Masthead, featured essay, the four subjects, guide notice, submissions |
+| `essays.html` | Every published essay, arranged under Economics, Moral Politics, Philosophy, Miscellaneous |
+| `essays/the-best-something.html` | The essay itself |
+| `political-thought-guide.html` | Standing reference work: 6 eras, 48 schools, 123 thinkers, with portraits |
+| `about.html` | Purpose of the review and submission terms |
 
-## Design
+Each page has one job and no page repeats another. The guide is reference material and carries no argument; the essays argue and carry no reference apparatus.
 
-Two colours only, following the identity guide.
+## Portraits
 
-| Role | Hex |
+`assets/js/portraits.js` requests portraits from the Wikimedia API in batches of fifty and inserts them into the plates beside each thinker. Nothing is stored in the repository, so the images cost no space and never go stale. Where Wikimedia holds no image, the plate keeps the thinker's initials.
+
+## Adding an essay
+
+1. Copy `essays/the-best-something.html`, rename it, and replace the title, kicker, standfirst, and body paragraphs.
+2. Open `essays.html` and add a `<li>` to the correct subject's `<ul class="listing">`, copying the existing one as the pattern.
+3. If the essay should lead the site, replace the block inside `<section id="featured">` in `index.html` and update the essay count on that subject's card.
+
+## Palette and type
+
+| Role | Value |
 | --- | --- |
 | Background | `#F7F3EA` |
 | Alternate background | `#FBF8F2` |
@@ -28,24 +36,8 @@ Two colours only, following the identity guide.
 | Body text | `#4A4A4A` |
 | Rules and dividers | `#D8CEC0` |
 
-Display face: Cormorant Garamond. Body face: Spectral. Both load from Google Fonts, with system serifs as fallback.
-
-Colours live in `:root` at the top of `style.css`. Change them there and the whole site follows.
-
-## The index drawer
-
-The three lines at the top left open a drawer holding the full classification: seven eras, each expanding to its schools, each school listing its thinkers. Every entry links to its anchor in `guide.html`.
-
-To add a thinker, add an `<article class="thinker" id="thinker-name">` block to the right school in `guide.html`, then add a matching `<li>` to that school's list inside the drawer. The drawer markup is duplicated in all three pages, so paste the same line into each.
+Display face Cormorant Garamond, body face Spectral, both from Google Fonts with system serifs behind them. Every value sits in `:root` at the top of `assets/css/style.css`.
 
 ## Publishing
 
-1. Commit and push from GitHub Desktop.
-2. On GitHub: Settings, then Pages, then Source: deploy from branch `main`, folder `/ (root)`.
-3. The site appears at `https://project2-stack.github.io/ThinkersFoundation/`.
-
-## To do
-
-- Replace the placeholder essays on the homepage with real ones
-- Write the About page
-- Add individual essay pages under an `essays/` folder
+Commit and push from GitHub Desktop. GitHub Pages serves the repository root, so all of these files belong at the top level of the repository, not inside a subfolder.
