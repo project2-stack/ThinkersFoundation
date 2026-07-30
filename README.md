@@ -14,6 +14,7 @@ An independent review of economics, moral politics, and philosophy. A static sit
 | `articles/the-best-something.html` | The article itself |
 | `political-thought-guide.html` | Reference work: 6 eras, 48 schools, 123 thinkers, with portraits |
 | `about.html` | Purpose of the review and submission terms |
+| `assets/js/thinkers.js` | The 123 guide entries, used by the draw card |
 
 Each subject is a page of its own. The sidebar carries one link per subject and one link to the guide.
 
@@ -23,9 +24,13 @@ Each subject is a page of its own. The sidebar carries one link per subject and 
 2. Add an `<li>` to the `<ul class="listing">` on that subject's page, copying the existing one as the pattern.
 3. To lead the site with it, replace the block inside `<section id="lead">` in `index.html` and update the count on that subject's card.
 
+## Homepage sections
+
+`Featured Thinkers` is a fixed group of four, defined in the `FEATURED` list used to build `index.html`; each links to that thinker's entry in the guide. `Draw a Thinker` turns up a random entry from `assets/js/thinkers.js`, which holds all 123 records generated from the guide, and offers a link through to the full entry.
+
 ## Portraits
 
-`assets/js/portraits.js` requests portraits from the Wikimedia API in batches and inserts them into the plates beside each thinker. Nothing is stored in the repository. Where Wikimedia holds no image the plate keeps the thinker's initials.
+`assets/js/portraits.js` requests portraits from the Wikimedia API in two passes: the article's designated page image, then, for any plate still empty, the first suitable illustration on that article. Nothing is stored in the repository. Where Wikimedia holds no free image at all, the plate keeps the thinker's initials.
 
 ## Palette and type
 
